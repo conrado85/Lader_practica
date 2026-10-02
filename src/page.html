@@ -1,0 +1,1501 @@
+<!doctype html>
+
+<html class="dark" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#f1dbff",
+              "border-subtle": "rgba(199, 184, 234, 0.15)",
+              "surface-dim": "#151027",
+              "electric-violet": "#5E17EA",
+              "on-background": "#e7deff",
+              "text-secondary": "#C7B8EA",
+              "on-secondary-fixed": "#2b0052",
+              "inverse-primary": "#7e30d3",
+              "glow-radial": "rgba(139, 63, 224, 0.35)",
+              "on-secondary-container": "#d9b3ff",
+              "surface-container-lowest": "#100a22",
+              surface: "#151027",
+              "on-tertiary-container": "#f7e6ff",
+              "text-muted": "#9A8BB8",
+              "error-container": "#93000a",
+              "tertiary-container": "#8d47ca",
+              outline: "#978d9f",
+              "surface-container-highest": "#37314a",
+              "on-primary": "#470084",
+              "glow-spotlight": "rgba(94, 23, 234, 0.22)",
+              "on-tertiary": "#4a007f",
+              "surface-container": "#211c34",
+              "on-surface": "#e7deff",
+              secondary: "#dbb8ff",
+              "on-surface-variant": "#cec2d6",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#eedbff",
+              "surface-bright": "#3b364f",
+              "space-deep": "#05021A",
+              "on-secondary-fixed-variant": "#6700b6",
+              "text-primary": "#FFFFFF",
+              primary: "#dab9ff",
+              "inverse-surface": "#e7deff",
+              "border-active": "rgba(159, 75, 246, 0.4)",
+              error: "#ffb4ab",
+              "secondary-fixed": "#efdbff",
+              "surface-variant": "#37314a",
+              "primary-fixed-dim": "#dab9ff",
+              "secondary-fixed-dim": "#dbb8ff",
+              "surface-tint": "#dab9ff",
+              "on-primary-fixed-variant": "#6500b8",
+              "on-tertiary-fixed": "#2d0050",
+              "surface-container-high": "#2c263f",
+              "primary-container": "#8b3fe0",
+              "on-primary-fixed": "#2a0053",
+              tertiary: "#dfb7ff",
+              "inverse-on-surface": "#322d46",
+              "surface-container-low": "#1d1830",
+              "space-surface": "#130B2E",
+              background: "#151027",
+              "on-secondary": "#480082",
+              "on-error": "#690005",
+              "outline-variant": "#4c4354",
+              "on-primary-container": "#f5e6ff",
+              "on-tertiary-fixed-variant": "#661aa3",
+              "space-elevated": "#1A0F3C",
+              "tertiary-fixed-dim": "#dfb7ff",
+              "secondary-container": "#7305ca",
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "1.5rem",
+              "space-3xl": "6rem",
+              "space-xl": "2.5rem",
+              "space-2xl": "4rem",
+              "space-lg": "1.5rem",
+              "margin-mobile": "1.25rem",
+              "space-xs": "0.25rem",
+              "space-md": "1rem",
+              "gutter-mobile": "1rem",
+              margin: "2rem",
+              "space-sm": "0.5rem",
+            },
+            fontFamily: {
+              "label-lg": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "headline-sm": ["Plus Jakarta Sans"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "label-md": ["Plus Jakarta Sans"],
+              "display-hero": ["Plus Jakarta Sans"],
+              "display-hero-mobile": ["Plus Jakarta Sans"],
+              "label-sm": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "label-lg": [
+                "15px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+              "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "26px",
+                {
+                  lineHeight: "34px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "28px", fontWeight: "600" },
+              ],
+              "headline-lg": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-md": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "display-hero-mobile": [
+                "34px",
+                {
+                  lineHeight: "42px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "800",
+                },
+              ],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.04em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-space-deep font-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div
+        class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin pt-space-sm"
+      >
+        <div
+          class="h-20 w-full rounded-full bg-space-surface/85 backdrop-blur-xl px-space-md lg:px-space-lg flex items-center justify-between shadow-[0_16px_40px_rgba(5,2,26,0.6)]"
+        >
+          <div class="flex items-center gap-space-sm">
+            <a
+              class="flex items-center gap-space-sm transition-opacity hover:opacity-90"
+              data-path="servicios"
+              href="#inicio"
+              ><img
+                alt="LOGOTIPO - LADER-15.png"
+                class="h-8 w-auto rounded-full bg-space-deep p-3xl object-contain"
+                src="/src/public/LOGOTIPO - LADER-15.png"
+              />
+              </a
+            >
+          </div>
+          <nav
+            class="hidden md:flex items-center gap-space-xs p-space-xs rounded-full bg-space-elevated/60"
+            data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-full shadow-[0_0_16px_rgba(139,63,224,0.4)]"
+          >
+            <a
+              class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-200"
+              data-path="servicios"
+              href="#servicios"
+              >Servicios</a
+            ><a
+              class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-200"
+              data-path="portfolio"
+              href="#portfolio"
+              >Portfolio</a
+            ><a
+              aria-current="page"
+              class="px-space-md py-space-xs transition-all duration-200 bg-primary-container text-on-primary-container font-semibold rounded-full shadow-[0_0_16px_rgba(139,63,224,0.4)]"
+              data-path="desarrollo-web"
+              href="#desarrollo-web"
+              >Desarrollo Web</a
+            ><a
+              class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-200"
+              data-path="sumate"
+              href="#contactanos"
+              >Sumate</a
+            ><a
+              class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-200"
+              data-path="contacto"
+              href="#contactanos"
+              >Contacto</a
+            >
+          </nav>
+          <div class="flex items-center gap-space-sm">
+            <a
+              class="inline-flex items-center justify-center px-space-md sm:px-space-lg py-space-xs rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg transition-all duration-300 hover:scale-[1.03] shadow-[0_4px_20px_rgba(139,63,224,0.5)] hover:shadow-[0_0_24px_rgba(159,75,246,0.6)]"
+              data-path="contacto"
+              href="#contactanos"
+              >Agendar Reunión</a
+            >
+            <div
+              class="hidden sm:flex w-8 h-8 rounded-full bg-primary items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-on-primary text-[18px]"
+                >person</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-space-deep min-h-screen">
+      <div class="flex flex-col w-full text-on-surface">
+        <!-- HERO SECTION -->
+        <section
+          class="relative w-full overflow-hidden pb-space-3xl -mt-20 pt-28 lg:pt-36"
+          id="inicio"
+        >
+          <!-- Atmospheric Ambient Glows -->
+          <div
+            class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-electric-violet/25 blur-[140px] rounded-full"
+          ></div>
+          <div
+            class="pointer-events-none absolute top-1/3 -right-40 w-[500px] h-[500px] bg-primary-container/20 blur-[130px] rounded-full"
+          ></div>
+          <div
+            class="pointer-events-none absolute -bottom-10 -left-40 w-[600px] h-[500px] bg-electric-violet/15 blur-[120px] rounded-full"
+          ></div>
+          <div
+            class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin relative z-10 flex flex-col items-center text-center"
+          >
+            <!-- Top Trust Pill -->
+            <a
+              class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-space-surface/90 text-text-primary shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 mb-space-lg"
+              href="#opiniones"
+            >
+              <span class="text-[#f59e0b] tracking-wider text-label-md"
+                >★★★★★</span
+              >
+              <span class="font-label-md text-label-md text-text-secondary"
+                >+200 Clientes nos eligieron.</span
+              >
+              <span
+                class="font-label-md text-label-md text-primary font-bold ml-1"
+                >Mirá sus opiniones →</span
+              >
+            </a>
+            <!-- Main Headline verbatim -->
+            <h1
+              class="font-display-hero text-headline-lg lg:text-display-hero text-text-primary tracking-tight max-w-4xl mx-auto leading-tight mb-space-md"
+            >
+              Obtenga su sitio profesional para impulsar su presencia online y
+              sus ventas.
+            </h1>
+            <!-- Subtitle verbatim -->
+            <p
+              class="font-body-lg text-body-md lg:text-body-lg text-text-secondary max-w-2xl mx-auto mb-space-xl leading-relaxed"
+            >
+              Diseñamos y desarrollamos soluciones web de alto impacto
+              orientadas a resultados comerciales, adaptadas a su marca y listas
+              para convertir visitantes en clientes.
+            </p>
+            <!-- Hero CTA Group -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-space-md w-full max-w-md sm:max-w-none mb-space-2xl"
+            >
+              <!-- Primary Button: WhatsApp CTA -->
+              <a
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-full bg-gradient-to-r from-[#25D366] to-[#128C7E] text-text-primary font-label-lg text-label-lg shadow-[0_8px_25px_rgba(37,211,102,0.35)] hover:shadow-[0_12px_32px_rgba(37,211,102,0.5)] hover:scale-105 transition-all duration-300"
+                href="https://wa.me/5491124904374"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span class="material-symbols-outlined text-[22px]">chat</span>
+                <span>WhatsApp: +5491124904374</span>
+              </a>
+              <!-- Secondary Button: Agendar Reunión -->
+              <a
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-full bg-space-surface/80 text-text-primary font-label-lg text-label-lg shadow-md hover:bg-space-elevated hover:shadow-[0_4px_24px_rgba(139,63,224,0.35)] hover:scale-105 transition-all duration-300"
+                href="https://calendly.com/franco-lader/30min"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span class="material-symbols-outlined text-primary text-[20px]"
+                  >calendar_today</span
+                >
+                <span>Agendar reunión estratégica</span>
+              </a>
+            </div>
+            <!-- Verified Partner Badges Row -->
+            <div
+              class="w-full max-w-4xl pt-space-md pb-space-lg flex flex-wrap items-center justify-center gap-6 sm:gap-10 opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <div
+                class="flex items-center gap-2 text-text-secondary font-label-md"
+              >
+                <span class="material-symbols-outlined text-primary text-[22px]"
+                  >verified</span
+                >
+                <span class="font-bold tracking-tight text-text-primary"
+                  >Google</span
+                >
+                <span class="text-text-muted">Partner</span>
+              </div>
+              <div
+                class="flex items-center gap-2 text-text-secondary font-label-md"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[22px]"
+                  >shopping_bag</span
+                >
+                <span class="text-text-muted">Especialista</span>
+                <span class="font-bold tracking-tight text-text-primary"
+                  >Tiendanube</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 text-text-secondary font-label-md"
+              >
+                <span class="material-symbols-outlined text-primary text-[22px]"
+                  >hub</span
+                >
+                <span class="font-bold tracking-tight text-text-primary"
+                  >Kommo</span
+                >
+                <span class="text-text-muted">Partner</span>
+              </div>
+              <div
+                class="flex items-center gap-2 text-text-secondary font-label-md"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[22px]"
+                  >storefront</span
+                >
+                <span class="font-bold tracking-tight text-text-primary"
+                  >Shopify</span
+                >
+                <span class="text-text-muted">Partners</span>
+              </div>
+              <div
+                class="flex items-center gap-2 text-text-secondary font-label-md"
+              >
+                <span class="material-symbols-outlined text-primary text-[22px]"
+                  >all_inclusive</span
+                >
+                <span class="font-bold tracking-tight text-text-primary"
+                  >Meta</span
+                >
+                <span class="text-text-muted">Business Partner</span>
+              </div>
+            </div>
+            <!-- Stat Counters Section (Lader Authentic Numbers) -->
+            <div
+              class="w-full mt-space-xl grid grid-cols-1 md:grid-cols-3 gap-gutter"
+            >
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/70 backdrop-blur-md shadow-lg flex flex-col items-center justify-center hover:-translate-y-1 transition-all duration-300"
+              >
+                <span
+                  class="font-display-hero text-headline-lg lg:text-display-hero text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-primary to-secondary leading-none mb-space-xs"
+                  >+200</span
+                >
+                <span
+                  class="font-body-md text-body-md text-text-secondary font-medium"
+                  >Clientes confiaron en nosotros</span
+                >
+              </div>
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/70 backdrop-blur-md shadow-lg flex flex-col items-center justify-center hover:-translate-y-1 transition-all duration-300"
+              >
+                <span
+                  class="font-display-hero text-headline-lg lg:text-display-hero text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-primary to-secondary leading-none mb-space-xs"
+                  >+150</span
+                >
+                <span
+                  class="font-body-md text-body-md text-text-secondary font-medium"
+                  >Webs desarrolladas</span
+                >
+              </div>
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/70 backdrop-blur-md shadow-lg flex flex-col items-center justify-center hover:-translate-y-1 transition-all duration-300"
+              >
+                <span
+                  class="font-display-hero text-headline-lg lg:text-display-hero text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-primary to-secondary leading-none mb-space-xs"
+                  >+5</span
+                >
+                <span
+                  class="font-body-md text-body-md text-text-secondary font-medium"
+                  >Años en el mercado</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SOLUCIONES WEB Y SERVICIOS -->
+        <section class="relative w-full py-space-3xl bg-space-surface/40" id="servicios">
+          <div
+            class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin relative z-10"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md"
+            >
+              <div>
+                <span
+                  class="inline-block px-space-md py-1 rounded-full bg-electric-violet/20 text-primary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs"
+                >
+                  Arquitectura Digital
+                </span>
+                <h2 class="font-headline-lg text-headline-lg text-text-primary">
+                  Nuestros Servicios
+                </h2>
+                <p
+                  class="font-body-lg text-body-lg text-text-secondary mt-space-xs max-w-xl"
+                >
+                  Ecosistemas digitales diseñados a medida para impulsar su
+                  negocio.
+                </p>
+              </div>
+              <a
+                class="self-start md:self-auto inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-space-elevated text-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all duration-200"
+                href="https://wa.me/5491124904374"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span>Consultar presupuesto a medida</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <!-- 4 Core Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+              <!-- Card 1: Página Institucional -->
+              <div
+                class="group p-space-xl rounded-lg bg-space-surface/90 hover:bg-space-elevated shadow-lg hover:shadow-[0_16px_40px_rgba(139,63,224,0.25)] transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div
+                  class="absolute -top-12 -right-12 w-36 h-36 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"
+                ></div>
+                <div>
+                  <div class="flex items-center justify-between mb-space-lg">
+                    <div
+                      class="w-14 h-14 rounded-full bg-electric-violet/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"
+                    >
+                      <span class="material-symbols-outlined text-[28px]"
+                        >domain</span
+                      >
+                    </div>
+                    <span
+                      class="px-space-md py-1 rounded-full bg-space-elevated text-text-secondary font-label-sm text-label-sm"
+                    >
+                      Identidad Corporativa
+                    </span>
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-text-primary mb-space-xs"
+                  >
+                    Página Institucional
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-text-secondary mb-space-lg"
+                  >
+                    Muestre su negocio con una página profesional. Transmita
+                    solidez, autoridad de marca y confianza para cerrar clientes
+                    institucionales.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md group-hover:translate-x-1 transition-transform"
+                    href="https://wa.me/5491124904374?text=Hola,%20quisiera%20más%20información%20sobre%20Página%20Institucional"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span>Saber más</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <!-- Card 2: Ecommerce -->
+              <div
+                class="group p-space-xl rounded-lg bg-space-surface/90 hover:bg-space-elevated shadow-lg hover:shadow-[0_16px_40px_rgba(139,63,224,0.25)] transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div
+                  class="absolute -top-12 -right-12 w-36 h-36 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all"
+                ></div>
+                <div>
+                  <div class="flex items-center justify-between mb-space-lg">
+                    <div
+                      class="w-14 h-14 rounded-full bg-electric-violet/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform"
+                    >
+                      <span class="material-symbols-outlined text-[28px]"
+                        >shopping_cart</span
+                      >
+                    </div>
+                    <span
+                      class="px-space-md py-1 rounded-full bg-space-elevated text-text-secondary font-label-sm text-label-sm"
+                    >
+                      Ventas 24/7
+                    </span>
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-text-primary mb-space-xs"
+                  >
+                    Ecommerce
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-text-secondary mb-space-lg"
+                  >
+                    Venda sus productos en línea con facilidad y eficiencia.
+                    Pasarelas de pago automatizadas, logística integrada y
+                    checkout frictionless.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md group-hover:translate-x-1 transition-transform"
+                    href="https://wa.me/5491124904374?text=Hola,%20quisiera%20más%20información%20sobre%20Ecommerce"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span>Saber más</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <!-- Card 3: Landing Page -->
+              <div
+                class="group p-space-xl rounded-lg bg-space-surface/90 hover:bg-space-elevated shadow-lg hover:shadow-[0_16px_40px_rgba(139,63,224,0.25)] transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div
+                  class="absolute -top-12 -right-12 w-36 h-36 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"
+                ></div>
+                <div>
+                  <div class="flex items-center justify-between mb-space-lg">
+                    <div
+                      class="w-14 h-14 rounded-full bg-electric-violet/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"
+                    >
+                      <span class="material-symbols-outlined text-[28px]"
+                        >rocket_launch</span
+                      >
+                    </div>
+                    <span
+                      class="px-space-md py-1 rounded-full bg-space-elevated text-text-secondary font-label-sm text-label-sm"
+                    >
+                      Alta Conversión
+                    </span>
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-text-primary mb-space-xs"
+                  >
+                    Landing Page
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-text-secondary mb-space-lg"
+                  >
+                    Atraiga clientes potenciales y maximice sus conversiones.
+                    Páginas diseñadas milimétricamente para campañas de Paid
+                    Media efectivas.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md group-hover:translate-x-1 transition-transform"
+                    href="https://wa.me/5491124904374?text=Hola,%20quisiera%20más%20información%20sobre%20Landing%20Pages"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span>Saber más</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <!-- Card 4: E-learning -->
+              <div
+                class="group p-space-xl rounded-lg bg-space-surface/90 hover:bg-space-elevated shadow-lg hover:shadow-[0_16px_40px_rgba(139,63,224,0.25)] transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div
+                  class="absolute -top-12 -right-12 w-36 h-36 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all"
+                ></div>
+                <div>
+                  <div class="flex items-center justify-between mb-space-lg">
+                    <div
+                      class="w-14 h-14 rounded-full bg-electric-violet/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform"
+                    >
+                      <span class="material-symbols-outlined text-[28px]"
+                        >school</span
+                      >
+                    </div>
+                    <span
+                      class="px-space-md py-1 rounded-full bg-space-elevated text-text-secondary font-label-sm text-label-sm"
+                    >
+                      Educación &amp; Escala
+                    </span>
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-text-primary mb-space-xs"
+                  >
+                    E-learning
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-text-secondary mb-space-lg"
+                  >
+                    Cree y venda cursos en línea, llegue a más estudiantes.
+                    Plataformas de aprendizaje interactivas con membresías y
+                    pagos periódicos.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md group-hover:translate-x-1 transition-transform"
+                    href="https://wa.me/5491124904374?text=Hola,%20quisiera%20más%20información%20sobre%20E-learning"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span>Saber más</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SERVICIOS PARA EL DESARROLLO WEB (VALORES AGREGADOS Y BENEFICIOS CLAVE) -->
+        <section class="relative w-full py-space-3xl overflow-hidden" id="desarrollo-web">
+          <div
+            class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-electric-violet/15 blur-[150px] rounded-full"
+          ></div>
+          <div
+            class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin relative z-10"
+          >
+            <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+              <span
+                class="inline-block px-space-md py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs"
+              >
+                Estándar de Calidad
+              </span>
+              <h2 class="font-headline-lg text-headline-lg text-text-primary">
+                Servicios para el Desarrollo Web
+              </h2>
+              <p
+                class="font-body-lg text-body-lg text-text-secondary mt-space-xs"
+              >
+                Cada proyecto incluye todo lo necesario para garantizar el éxito
+                técnico y comercial.
+              </p>
+            </div>
+            <!-- Feature Grid -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"
+            >
+              <!-- Feature 1 -->
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/80 hover:bg-space-elevated shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-full bg-space-elevated text-primary flex items-center justify-center mb-space-md shadow-[0_0_16px_rgba(139,63,224,0.3)]"
+                  >
+                    <span class="material-symbols-outlined text-[24px]"
+                      >devices</span
+                    >
+                  </div>
+                  <h4
+                    class="font-headline-sm text-headline-sm text-text-primary mb-space-xs"
+                  >
+                    Diseño personalizado y responsive
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-text-secondary leading-relaxed"
+                  >
+                    Un diseño web único, adaptado a su marca y que se vea
+                    perfecto en cualquier dispositivo.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-md flex items-center gap-2 text-primary font-label-sm text-label-sm"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >check_circle</span
+                  >
+                  <span>Mobile-First Optimizado</span>
+                </div>
+              </div>
+              <!-- Feature 2 -->
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/80 hover:bg-space-elevated shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-full bg-space-elevated text-secondary flex items-center justify-center mb-space-md shadow-[0_0_16px_rgba(219,184,255,0.3)]"
+                  >
+                    <span class="material-symbols-outlined text-[24px]"
+                      >dashboard_customize</span
+                    >
+                  </div>
+                  <h4
+                    class="font-headline-sm text-headline-sm text-text-primary mb-space-xs"
+                  >
+                    Página web autoadministrable
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-text-secondary leading-relaxed"
+                  >
+                    Actualice su sitio web fácilmente gracias a nuestro sistema
+                    de autoadministración y video tutoriales.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-md flex items-center gap-2 text-secondary font-label-sm text-label-sm"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >check_circle</span
+                  >
+                  <span>Control Total Sin Código</span>
+                </div>
+              </div>
+              <!-- Feature 3 -->
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/80 hover:bg-space-elevated shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-full bg-space-elevated text-primary flex items-center justify-center mb-space-md shadow-[0_0_16px_rgba(139,63,224,0.3)]"
+                  >
+                    <span class="material-symbols-outlined text-[24px]"
+                      >verified_user</span
+                    >
+                  </div>
+                  <h4
+                    class="font-headline-sm text-headline-sm text-text-primary mb-space-xs"
+                  >
+                    Garantía de satisfacción
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-text-secondary leading-relaxed"
+                  >
+                    Su satisfacción es nuestra prioridad, trabajaremos en su
+                    proyecto hasta que esté completamente satisfecho.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-md flex items-center gap-2 text-primary font-label-sm text-label-sm"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >check_circle</span
+                  >
+                  <span>Iteraciones Garantizadas</span>
+                </div>
+              </div>
+              <!-- Feature 4 -->
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/80 hover:bg-space-elevated shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-full bg-space-elevated text-[#25D366] flex items-center justify-center mb-space-md shadow-[0_0_16px_rgba(37,211,102,0.3)]"
+                  >
+                    <span class="material-symbols-outlined text-[24px]"
+                      >cloud_done</span
+                    >
+                  </div>
+                  <h4
+                    class="font-headline-sm text-headline-sm text-text-primary mb-space-xs"
+                  >
+                    Hosting y dominio gratis por 1 año
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-text-secondary leading-relaxed"
+                  >
+                    Olvídese de pagar por hosting y dominio por un año completo:
+                    ¡nosotros lo hacemos por usted!
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-md flex items-center gap-2 text-[#25D366] font-label-sm text-label-sm"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >check_circle</span
+                  >
+                  <span>100% Bonificado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- BANNER DONDE QUIERAS QUE ESTÉS -->
+        <section
+          class="w-full py-space-2xl bg-gradient-to-r from-space-surface via-space-elevated to-space-surface"
+          id="alcance"
+        >
+          <div
+            class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col lg:flex-row items-center justify-between gap-space-xl"
+          >
+            <div class="max-w-xl text-center lg:text-left">
+              <span
+                class="font-label-md text-label-md text-text-secondary uppercase tracking-widest block mb-space-xs"
+              >
+                Donde quieras que estés
+              </span>
+              <h2
+                class="font-headline-lg text-headline-lg text-text-primary mb-space-sm"
+              >
+                Podemos ayudarte
+              </h2>
+              <p class="font-body-md text-body-md text-text-secondary">
+                Trabajamos con clientes de diferentes países de Latinoamérica,
+                principalmente Argentina, y también de EEUU. Diseñamos
+                infraestructura digital con alcance global.
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row gap-space-md w-full sm:w-auto"
+            >
+              <a
+                class="inline-flex items-center justify-center px-space-xl py-space-sm rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_4px_20px_rgba(139,63,224,0.45)] hover:shadow-[0_0_24px_rgba(159,75,246,0.6)] hover:scale-105 transition-all"
+                href="https://wa.me/5491124904374"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Pedir presupuesto
+              </a>
+              <a
+                class="inline-flex items-center justify-center px-space-xl py-space-sm rounded-full bg-space-surface text-text-primary font-label-md text-label-md hover:bg-space-container transition-all"
+                href="https://calendly.com/franco-lader/30min"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Agendá una reunión
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- PROYECTOS DESTACADOS -->
+        <section class="w-full py-space-3xl" id="portfolio">
+          <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center mb-space-2xl"
+            >
+              <div class="lg:col-span-5">
+                <span
+                  class="inline-block px-space-md py-1 rounded-full bg-electric-violet/20 text-primary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs"
+                >
+                  Casos Reales
+                </span>
+                <h2
+                  class="font-headline-lg text-headline-lg text-text-primary mb-space-sm"
+                >
+                  Proyectos Destacados
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-text-secondary leading-relaxed mb-space-lg"
+                >
+                  En Lader, transformamos ideas en experiencias digitales
+                  únicas. Nos especializamos en diseño creativo y desarrollo
+                  web, ofreciendo soluciones personalizadas para cada marca.
+                </p>
+                <a
+                  class="inline-flex items-center gap-space-xs px-space-lg py-space-xs rounded-full bg-space-surface text-text-primary font-label-md text-label-md hover:bg-space-elevated transition-all"
+                  href="https://proyectos.lader.com.ar/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span>Ver más proyectos</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    >open_in_new</span
+                  >
+                </a>
+              </div>
+              <!-- Featured Project Showcase -->
+              <div class="lg:col-span-7">
+                <div
+                  class="group relative rounded-lg overflow-hidden bg-space-surface shadow-2xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(139,63,224,0.3)]"
+                >
+                  <img
+                    class="w-full h-80 lg:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Modern desktop screen mockup of Bauerberg Klein e-learning academy platform showing dark violet user interface, course cards, interactive dashboard, sleek modern aesthetics, neon purple back-glow, high key product photography style."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi3xUB2XKJSExMeSO3hjWQxCdSxl3VBuvv_fcRbu-dIJx8U1-MfCZW_pjebkl0ZjleQW7tREUIdWW8EbEabddlNBLlhrjxS94GqBDbD9orUruOOiIhJ3VNVPZ2l7g7l7NhJz5Ckjo1WKTXqewDEf6JpZktEYkmmE9y8L-yA0mEkhZBq7QJVKXoS2c_-HAPjAsQ1bYvBpnE7EGkNdUyaGrAweqiuRIez5N39BA7ulk9h5MCbEa0GF1e"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-space-deep via-space-surface/60 to-transparent flex flex-col justify-end p-space-xl"
+                  >
+                    <span
+                      class="px-space-md py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm w-max mb-space-xs shadow-md"
+                    >
+                      E-LEARNING / DESARROLLO WEB
+                    </span>
+                    <h3
+                      class="font-headline-md text-headline-md text-text-primary"
+                    >
+                      BAUERBERG KLEIN
+                    </h3>
+                    <p
+                      class="font-body-sm text-body-sm text-text-secondary mt-1"
+                    >
+                      Campus educativo de alta concurrencia con checkout
+                      integrado y gestión multi-país de cursos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Additional project cards strip -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/70 hover:bg-space-elevated transition-all flex items-center justify-between"
+              >
+                <div>
+                  <span
+                    class="text-label-sm font-label-sm text-primary uppercase"
+                    >Web Institucional</span
+                  >
+                  <h4
+                    class="font-headline-sm text-headline-sm text-text-primary"
+                  >
+                    We Are
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-text-secondary mt-1">
+                    Desarrollo Web &amp; Performance
+                  </p>
+                </div>
+                <a
+                  class="w-10 h-10 rounded-full bg-space-container flex items-center justify-center text-text-primary hover:bg-primary-container hover:text-on-primary-container transition-all"
+                  href="https://proyectos.lader.com.ar/desarrollos/we-are/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/70 hover:bg-space-elevated transition-all flex items-center justify-between"
+              >
+                <div>
+                  <span
+                    class="text-label-sm font-label-sm text-secondary uppercase"
+                    >Real Estate &amp; UX/UI</span
+                  >
+                  <h4
+                    class="font-headline-sm text-headline-sm text-text-primary"
+                  >
+                    Aracama Propiedades
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-text-secondary mt-1">
+                    Buscador dinámico de inmuebles y CRM integrado
+                  </p>
+                </div>
+                <a
+                  class="w-10 h-10 rounded-full bg-space-container flex items-center justify-center text-text-primary hover:bg-primary-container hover:text-on-primary-container transition-all"
+                  href="https://proyectos.lader.com.ar/desarrollos/aracama-propiedades/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- MARCAS QUE CONFÍAN EN NOSOTROS (SOCIAL PROOF) -->
+        <section class="w-full py-space-2xl bg-space-surface/30" id="marcas">
+          <div
+            class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin text-center"
+          >
+            <h3
+              class="font-headline-md text-headline-md text-text-primary mb-space-xl"
+            >
+              Marcas que confían en nosotros
+            </h3>
+            <!-- Brand grid with typography & clean emblems -->
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center opacity-75"
+            >
+              <div
+                class="p-space-md rounded-lg bg-space-surface/60 w-full flex items-center justify-center"
+              >
+                <span
+                  class="font-headline-sm text-headline-sm font-extrabold text-text-secondary tracking-tighter"
+                  >Gigared</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-lg bg-space-surface/60 w-full flex items-center justify-center"
+              >
+                <span
+                  class="font-headline-sm text-headline-sm font-bold text-text-secondary tracking-widest"
+                  >IAF</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-lg bg-space-surface/60 w-full flex items-center justify-center"
+              >
+                <span
+                  class="font-headline-sm text-headline-sm font-black text-text-secondary"
+                  >Fantoche</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-lg bg-space-surface/60 w-full flex items-center justify-center"
+              >
+                <span
+                  class="font-headline-sm text-headline-sm font-semibold text-text-secondary italic"
+                  >Taraborelli</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-lg bg-space-surface/60 w-full flex items-center justify-center"
+              >
+                <span
+                  class="font-headline-sm text-headline-sm font-bold text-text-secondary tracking-tight"
+                  >Localiza</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-lg bg-space-surface/60 w-full flex items-center justify-center"
+              >
+                <span
+                  class="font-headline-sm text-headline-sm font-bold text-text-secondary"
+                  >Freddo</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- TESTIMONIAL SECTION ('¿QUÉ DICEN DE NOSOTROS?') -->
+        <section
+          class="w-full py-space-3xl relative overflow-hidden"
+          id="opiniones"
+        >
+          <div
+            class="pointer-events-none absolute -bottom-20 right-10 w-96 h-96 bg-electric-violet/20 blur-[130px] rounded-full"
+          ></div>
+          <div
+            class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin relative z-10"
+          >
+            <div class="text-center mb-space-2xl">
+              <span
+                class="inline-block px-space-md py-1 rounded-full bg-electric-violet/20 text-primary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs"
+              >
+                Testimonios Reales
+              </span>
+              <h2 class="font-headline-lg text-headline-lg text-text-primary">
+                ¿Qué dicen de nosotros?
+              </h2>
+            </div>
+            <!-- Main Highlighted Testimonial verbatim -->
+            <div
+              class="max-w-4xl mx-auto p-space-xl lg:p-space-2xl rounded-lg bg-space-surface/90 shadow-2xl backdrop-blur-md relative overflow-hidden"
+            >
+              <div
+                class="grid grid-cols-1 md:grid-cols-12 gap-space-xl items-center"
+              >
+                <div class="md:col-span-8 flex flex-col justify-between">
+                  <div>
+                    <div
+                      class="flex items-center gap-1 text-[#f59e0b] mb-space-sm text-label-md"
+                    >
+                      ★★★★★
+                    </div>
+                    <blockquote
+                      class="font-body-lg text-body-md lg:text-body-lg text-text-primary italic leading-relaxed mb-space-lg"
+                    >
+                      “Destaco su buena atención y predisposición. Como empresa
+                      que recién comienza a invertir en este tipo de servicios,
+                      nos sentimos bien asesorados y acompañados. Apreciamos el
+                      seguimiento que brindan y su apoyo constante.”
+                    </blockquote>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-headline-sm text-headline-sm text-text-primary font-bold"
+                    >
+                      Julian D’imperio
+                    </h4>
+                    <p
+                      class="font-body-sm text-body-sm text-primary font-semibold"
+                    >
+                      Gerente de Marketing y Comunicación • Fábrica de Luz
+                    </p>
+                  </div>
+                </div>
+                <div class="md:col-span-4 flex justify-center md:justify-end">
+                  <div
+                    class="relative w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-[0_0_30px_rgba(139,63,224,0.4)]"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      data-alt="Portrait of Julian D'imperio, sophisticated Marketing Director wearing a modern dark suit, soft warm studio lighting, deep violet background, corporate professional photo style."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAOFSPWXpDPFOuhH4kgJq-J9ghPUG5CCXAyk8T4R3kEO8x9vejzib0UWDImPy2WXZS9-GTjYpaoT5IMjb2QaHMti_7gtMo4oTYkTUcR17x9_jBe68biOrknHra7fnE5TrLXOOcyKF3uBqp8E7VRbVddJch_k3nt6yJdDekqMd0KLtbdQjQmIVcYudLAsE9UOeVZ6v4_ssmLKXBjKuFKECNgXTitSbFF9Z2xq2GKQL07AFypDEqJfzo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Additional Client Reviews Strip -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-gutter mt-space-xl max-w-4xl mx-auto"
+            >
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/60 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="flex items-center gap-1 text-[#f59e0b] mb-2 text-label-sm"
+                  >
+                    ★★★★★
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-text-secondary italic mb-space-md"
+                  >
+                    “En general, estamos satisfechos con el servicio, valoramos
+                    mucho la dedicación del equipo de Lader en el trabajo
+                    diario.”
+                  </p>
+                </div>
+                <div>
+                  <span
+                    class="font-label-md text-label-md text-text-primary block font-bold"
+                    >Jesica Dwek</span
+                  >
+                  <span class="font-body-sm text-body-sm text-text-muted"
+                    >Marketing Director • Alai Agency</span
+                  >
+                </div>
+              </div>
+              <div
+                class="p-space-lg rounded-lg bg-space-surface/60 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="flex items-center gap-1 text-[#f59e0b] mb-2 text-label-sm"
+                  >
+                    ★★★★★
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-text-secondary italic mb-space-md"
+                  >
+                    “Lader fue una gran ayuda para potenciar nuestra presencia
+                    en el mundo digital y potenciar nuestras ventas. Lo
+                    recomiendo!”
+                  </p>
+                </div>
+                <div>
+                  <span
+                    class="font-label-md text-label-md text-text-primary block font-bold"
+                    >Javier Szlifman</span
+                  >
+                  <span class="font-body-sm text-body-sm text-text-muted"
+                    >Gerente de Marketing • Herrajes San Martín</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- FINAL CTA & FORM SECTION ('CONTACTANOS') -->
+        <section
+          class="w-full py-space-3xl relative bg-space-surface/40"
+          id="contactanos"
+        >
+          <div
+            class="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-electric-violet/20 blur-[140px] rounded-full"
+          ></div>
+          <div
+            class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin relative z-10"
+          >
+            <div class="text-center max-w-2xl mx-auto mb-space-2xl">
+              <span
+                class="inline-block px-space-md py-1 rounded-full bg-electric-violet/20 text-primary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs"
+              >
+                Comencemos Hoy
+              </span>
+              <h2
+                class="font-headline-lg text-headline-lg text-text-primary mb-space-xs"
+              >
+                ¿Listo para impulsar su presencia online?
+              </h2>
+              <p class="font-body-md text-body-md text-text-secondary">
+                Envianos tu consulta y te responderemos en breve.
+              </p>
+              <!-- Direct Fast-Action Contact Buttons -->
+              <div
+                class="flex flex-wrap items-center justify-center gap-space-sm mt-space-lg"
+              >
+                <a
+                  class="inline-flex items-center gap-space-xs px-space-lg py-space-xs rounded-full bg-[#25D366]/20 text-[#25D366] font-label-md text-label-md hover:bg-[#25D366] hover:text-text-primary transition-all"
+                  href="https://wa.me/5491124904374"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >chat</span
+                  >
+                  <span>WhatsApp: +54 9 11 2490-4374</span>
+                </a>
+                <a
+                  class="inline-flex items-center gap-space-xs px-space-lg py-space-xs rounded-full bg-space-elevated text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all"
+                  href="https://calendly.com/franco-lader/30min"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >calendar_today</span
+                  >
+                  <span>Agendá una reunión estratégica</span>
+                </a>
+              </div>
+            </div>
+            <!-- Contact Form -->
+            <div
+              class="max-w-xl mx-auto p-space-xl rounded-lg bg-space-surface/90 shadow-2xl backdrop-blur-md"
+            >
+              <form
+                class="flex flex-col gap-space-md"
+                id="contactForm"
+                onsubmit="handleFormSubmit(event)"
+              >
+                <div>
+                  <label
+                    class="block font-label-sm text-label-sm text-text-secondary uppercase mb-space-xs ml-space-xs"
+                  >
+                    Nombre y Apellido
+                  </label>
+                  <input
+                    class="w-full px-space-lg py-space-sm rounded-full bg-space-deep text-text-primary placeholder-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    placeholder="Ej: Santiago Gómez"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block font-label-sm text-label-sm text-text-secondary uppercase mb-space-xs ml-space-xs"
+                  >
+                    Email
+                  </label>
+                  <input
+                    class="w-full px-space-lg py-space-sm rounded-full bg-space-deep text-text-primary placeholder-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    placeholder="santiago@empresa.com"
+                    required=""
+                    type="email"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block font-label-sm text-label-sm text-text-secondary uppercase mb-space-xs ml-space-xs"
+                  >
+                    Celular / WhatsApp
+                  </label>
+                  <input
+                    class="w-full px-space-lg py-space-sm rounded-full bg-space-deep text-text-primary placeholder-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    placeholder="+54 9 11 ..."
+                    required=""
+                    type="tel"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block font-label-sm text-label-sm text-text-secondary uppercase mb-space-xs ml-space-xs"
+                  >
+                    Mensaje
+                  </label>
+                  <textarea
+                    class="w-full px-space-lg py-space-md rounded-2xl bg-space-deep text-text-primary placeholder-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none"
+                    placeholder="Contanos sobre tu proyecto, objetivos o requerimientos..."
+                    required=""
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div class="pt-space-xs">
+                  <button
+                    class="w-full py-space-md rounded-full bg-gradient-to-r from-primary-container to-electric-violet text-on-primary-container font-label-lg text-label-lg shadow-[0_6px_25px_rgba(139,63,224,0.5)] hover:shadow-[0_8px_30px_rgba(159,75,246,0.7)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
+                    type="submit"
+                  >
+                    Enviar Consulta
+                  </button>
+                </div>
+                <div
+                  class="hidden text-center py-2 px-4 rounded-full bg-green-500/20 text-[#4ade80] font-label-md text-label-md"
+                  id="formSuccess"
+                >
+                  ¡Mensaje enviado con éxito! Te contactaremos a la brevedad.
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- Interactive Form Handling Script -->
+        <script>
+          function handleFormSubmit(e) {
+            e.preventDefault();
+            const successBox = document.getElementById("formSuccess");
+            if (successBox) {
+              successBox.classList.remove("hidden");
+              e.target.reset();
+              setTimeout(() => {
+                successBox.classList.add("hidden");
+              }, 5000);
+            }
+          }
+        </script>
+      </div>
+    </main>
+    <footer class="w-full bg-space-surface transition-colors">
+      <div
+        class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin py-space-2xl"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+          <div class="md:col-span-5 flex flex-col gap-space-md">
+            <div class="flex items-center gap-space-sm">
+              <img
+                alt="LOGOTIPO - LADER-15.png"
+                class="h-8 w-auto rounded-full bg-space-deep p-3xl object-contain"
+                src="/src/public/LOGOTIPO - LADER-15.png"
+              />
+            </div>
+            <p class="font-body-md text-body-md text-text-muted max-w-sm">
+              Impulsamos el crecimiento de marcas líderes mediante estrategia
+              digital, infraestructura web de alto rendimiento y experiencias de
+              conversión futuristas.
+            </p>
+            <div class="flex items-center gap-space-sm text-text-secondary">
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                >location_on</span
+              ><span class="font-body-sm text-body-sm"
+                >Uriarte 946, CABA Argentina</span
+              >
+            </div>
+          </div>
+          <div class="md:col-span-4 flex flex-col gap-space-sm">
+            <span
+              class="font-label-md text-label-md text-text-primary uppercase tracking-wider"
+              >Navegación</span
+            >
+            <div class="flex flex-col gap-space-xs">
+              <a
+                class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                data-path="servicios"
+                href="#servicios"
+                >Servicios</a
+              ><a
+                class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                data-path="portfolio"
+                href="#portfolio"
+                >Portfolio</a
+              ><a
+                class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                data-path="desarrollo-web"
+                href="#desarrollo-web"
+                >Desarrollo Web</a
+              ><a
+                class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                data-path="sumate"
+                href="#contactanos"
+                >Sumate al Equipo</a
+              ><a
+                class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                data-path="contacto"
+                href="#contactanos"
+                >Contacto</a
+              >
+            </div>
+          </div>
+          <div class="md:col-span-3 flex flex-col gap-space-sm">
+            <span
+              class="font-label-md text-label-md text-text-primary uppercase tracking-wider"
+              >Conectemos</span
+            >
+            <div class="flex flex-col gap-space-xs">
+              <a
+                class="flex items-center gap-space-xs font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                href="https://www.instagram.com/agencialader/"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ><span>Instagram</span></a
+              ><a
+                class="flex items-center gap-space-xs font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                href="https://www.linkedin.com/company/agencia-lader/posts/?feedView=all"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span class="material-symbols-outlined text-[18px]">work</span
+                ><span>LinkedIn</span></a
+              ><a
+                class="flex items-center gap-space-xs font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors"
+                href="https://wa.me/5491124904374"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span class="material-symbols-outlined text-[18px]">chat</span
+                ><span>WhatsApp (+54 9 11 2490-4374)</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-text-muted"
+        >
+          <p>© 2024 Agencia Lader. Todos los derechos reservados.</p>
+          <p
+            class="text-label-sm font-label-sm uppercase tracking-widest text-text-secondary"
+          >
+            Buenos Aires • Global Scale
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
