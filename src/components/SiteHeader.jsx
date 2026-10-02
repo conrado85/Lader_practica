@@ -23,7 +23,7 @@ export default function SiteHeader() {
             <img
               alt="Logotipo de Lader"
               className="h-8 w-auto object-contain"
-              src="/src/public/LOGOTIPO - LADER-15.png"
+              src="/logo-lader.png"
             />
           </a>
           <button
